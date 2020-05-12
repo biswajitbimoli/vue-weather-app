@@ -32,7 +32,7 @@ export default {
 
   data() {
     return {
-      api_key: "4f2fe202f0535e3b4ae6ec1acffa4f42",
+      api_key: "Your api key",
       url_base: "https://api.openweathermap.org/data/2.5/",
       query: "",
       weather: [],
@@ -74,7 +74,7 @@ export default {
     
     axios
         .get(
-          `${this.url_base}weather?q=Tezpur&units=metric&APPID=4f2fe202f0535e3b4ae6ec1acffa4f42`
+          `${this.url_base}weather?q=Tezpur&units=metric&APPID=${this.query}`
         )
         .then(res => {
           this.weather = res.data;
